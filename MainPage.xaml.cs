@@ -25,7 +25,7 @@ namespace App2
         public MainPage()
         {
             this.InitializeComponent();
-            content.Navigate(typeof(PageAdd));
+            content.Navigate(typeof(PageForecast));
             header.Text = "Witaj!";
         }
 
@@ -38,10 +38,11 @@ namespace App2
                 {
                     case "Stats":
                         content.Navigate(typeof(PageStats));
+                        header.Text = "Zuużycie";
                         break;
                     case "Add":
                         content.Navigate(typeof (PageAdd));
-                        header.Text = "Wpisz prąd";
+                        header.Text = "Spisz prąd";
                         break;
                     case "See":
                         header.Text = "Prognoza";

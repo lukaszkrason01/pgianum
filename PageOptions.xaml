@@ -33,11 +33,12 @@
                            FontSize="24"
                            Margin="0,10,0,0"/>
                 <Grid x:Name="toHide">
-                    <TextBlock Text="Opłata handlowa" 
+                    <TextBlock Text="Opłata handlowa" HorizontalAlignment="Left"
                                VerticalAlignment="Center"/>
                     <TextBox x:Name="cOplataH"
                         Width="30"
                              Margin="100,0,0,0"/>
+                    <TextBlock Text="zł" VerticalAlignment="Center" Margin="240,0,0,0"/>
                 </Grid>
                 <Grid>
                     <TextBlock Text="Dystrybucja Stała" 
@@ -45,6 +46,7 @@
                     <TextBox x:Name="cDysS"
                         Width="30"
                               Margin="100,0,0,0"/>
+                    <TextBlock Text="zł" VerticalAlignment="Center" Margin="240,0,0,0"/>
                 </Grid>
                 <Grid>
                     <TextBlock Text="Dystrybucja przejściowa" 
@@ -52,6 +54,7 @@
                     <TextBox x:Name="cDysP"
                         Width="30"
                               Margin="100,0,0,0"/>
+                    <TextBlock Text="zł" VerticalAlignment="Center" Margin="240,0,0,0"/>
                 </Grid>
                 <Grid>
                     <TextBlock Text="Opłata abonamentowa" 
@@ -59,6 +62,7 @@
                     <TextBox x:Name="coplaA"
                         Width="30"
                               Margin="100,0,0,0"/>
+                    <TextBlock Text="zł" VerticalAlignment="Center" Margin="240,0,0,0"/>
                 </Grid>
                 <Grid>
                     <TextBlock Text="Opłata OZE" 
@@ -66,6 +70,7 @@
                     <TextBox x:Name="cOZE"
                         Width="30"
                               Margin="100,0,0,0"/>
+                    <TextBlock Text="zł" VerticalAlignment="Center" Margin="240,0,0,0"/>
                 </Grid>
                 <StackPanel Margin="0,20,0,0">
                     <TextBlock Text="Taryfa pierwsza"
@@ -76,6 +81,7 @@
                         <TextBox x:Name="cIc"
                             Width="30"
                               Margin="100,0,0,0"/>
+                        <TextBlock Text="zł" VerticalAlignment="Center" Margin="240,0,0,0"/>
                     </Grid>
                     <Grid>
                         <TextBlock Text="Przesył 1kW energii" 
@@ -83,6 +89,7 @@
                         <TextBox x:Name="cIp"
                             Width="30"
                               Margin="100,0,0,0"/>
+                        <TextBlock Text="zł" VerticalAlignment="Center" Margin="240,0,0,0"/>
                     </Grid>
                 </StackPanel>
                 <StackPanel>
@@ -94,6 +101,7 @@
                         <TextBox x:Name="cIIc"
                             Width="30"
                               Margin="100,0,0,0"/>
+                        <TextBlock Text="zł" VerticalAlignment="Center" Margin="240,0,0,0"/>
                     </Grid>
                     <Grid>
                         <TextBlock Text="Przesył 1kW energii" 
@@ -101,6 +109,7 @@
                         <TextBox x:Name="cIIp"
                             Width="30"
                               Margin="100,0,0,0"/>
+                        <TextBlock Text="zł" VerticalAlignment="Center" Margin="240,0,0,0"/>
                     </Grid>
                 </StackPanel>
             </StackPanel>

@@ -5,6 +5,7 @@
     xmlns:local="using:App2"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Charting="using:WinRTXamlToolkit.Controls.DataVisualization.Charting"
     mc:Ignorable="d">
     <Grid Background="White">
        
@@ -51,7 +52,7 @@
         </VisualStateManager.VisualStateGroups>
 
         <SplitView x:Name="mySplitView" 
-                   DisplayMode="Inline"
+                   DisplayMode="CompactInline"
                    IsPaneOpen="True">
             <SplitView.Pane>
                 <Grid>
@@ -88,7 +89,7 @@
                                 <SymbolIcon Symbol="Add"
                                         Height="38" 
                                         Width="38" />
-                                <TextBlock Text="Wpisz prąd" 
+                                <TextBlock Text="Spisz prąd" 
                                        Margin="4,10,0,0"/>
                             </StackPanel>
                         </Button>

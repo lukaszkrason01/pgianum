@@ -57,7 +57,7 @@ namespace App2
 
                 if (!myKole.check2(time))
                 {
-                    if (DateTime.Compare(DateTime.Today, time) > 0)
+                    if (DateTime.Compare(DateTime.Today, time) >= 0)
                     {
                         Wpis nowyWpis = new Wpis(a, b, time, 1);
                         nowyWpis.ZapiszWpis();
