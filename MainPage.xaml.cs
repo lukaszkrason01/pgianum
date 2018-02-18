@@ -25,13 +25,8 @@ namespace App2
         public MainPage()
         {
             this.InitializeComponent();
-            content.Navigate(typeof(PageForecast));
+            content.Navigate(typeof(PageAdd));
             header.Text = "Witaj!";
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void MenuButttonClick(object sender, RoutedEventArgs e)
@@ -41,6 +36,9 @@ namespace App2
             {
                 switch (rb.Tag.ToString())
                 {
+                    case "Stats":
+                        content.Navigate(typeof(PageStats));
+                        break;
                     case "Add":
                         content.Navigate(typeof (PageAdd));
                         header.Text = "Wpisz prąd";

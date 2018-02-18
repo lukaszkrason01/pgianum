@@ -19,7 +19,7 @@
                         <Setter Target="mySplitView.DisplayMode"
                                 Value="Overlay" />
                         <Setter Target="mySplitView.IsPaneOpen"
-                                Value="True" />
+                                Value="False" />
                     </VisualState.Setters>
                 </VisualState>
 
@@ -41,7 +41,7 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="mySplitView.DisplayMode"
-                                Value="Overlay" />
+                                Value="CompactInline" />
                         <Setter Target="mySplitView.IsPaneOpen"
                                 Value="False" />
                     </VisualState.Setters>
@@ -89,6 +89,22 @@
                                         Height="38" 
                                         Width="38" />
                                 <TextBlock Text="Wpisz prąd" 
+                                       Margin="4,10,0,0"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Tag="Stats" 
+                            HorizontalContentAlignment="left"
+                            Click="MenuButttonClick" 
+                            Width="320"
+                            Height="48"
+                            BorderThickness="0"
+                            Background="lightGray"
+                            >
+                            <StackPanel Orientation="Horizontal">
+                                <SymbolIcon Symbol="Zoom"
+                                        Height="38" 
+                                        Width="38" />
+                                <TextBlock Text="Pokaż zużycie" 
                                        Margin="4,10,0,0"/>
                             </StackPanel>
                         </Button>

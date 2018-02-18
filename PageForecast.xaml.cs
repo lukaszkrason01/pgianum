@@ -50,8 +50,20 @@ namespace App2
                 naw += Convert.ToString(myKole.licznik[myKole.licznik.Count - 1].dzien.Year);
                 dzien.Text = Convert.ToString(naw);
 
-                ow1.Text = Convert.ToString(myKole.licznik[myKole.licznik.Count - 1].taryfapierwsza) + " kW";
-                ow2.Text = Convert.ToString(myKole.licznik[myKole.licznik.Count - 1].taryfadruga) + " kW";
+                double licz = myKole.licznik[myKole.licznik.Count - 1].taryfapierwsza;
+
+                if (myKole.licznik[myKole.licznik.Count - 1].dzien ==
+                    myKole.doladowania[myKole.doladowania.Count - 1].dzien)
+                    licz = myKole.licznik[myKole.licznik.Count - 1].taryfapierwsza + myKole.doladowania[myKole.doladowania.Count - 1].taryfapierwsza;
+
+                ow1.Text = Convert.ToString(licz) + " kW";
+
+                double licz2 = myKole.licznik[myKole.licznik.Count - 1].taryfadruga;
+                if (myKole.licznik[myKole.licznik.Count - 1].dzien ==
+                    myKole.doladowania[myKole.doladowania.Count - 1].dzien)
+                    licz2 = myKole.licznik[myKole.licznik.Count - 1].taryfadruga + myKole.doladowania[myKole.doladowania.Count - 1].taryfadruga;
+
+                ow2.Text = Convert.ToString(licz2) + " kW";
 
                 if (myKole.licznik.Count > 1)
                 {
@@ -63,7 +75,7 @@ namespace App2
 
                     double estym1 = (max1 + 4 * averige1) / 5;
 
-                    double end1 = (myKole.licznik[myKole.licznik.Count - 1].taryfapierwsza) / (estym1);
+                    double end1 = (licz) / (estym1);
 
                     wjn1.Text = end1.ToString("0.00") + " dni";
                     if (end1 > 7) wjn1.Foreground = new SolidColorBrush(Colors.Black);
@@ -74,17 +86,17 @@ namespace App2
                     double averige2 = myKole.zuuzycie2.Sum() / myKole.zuuzycie2.Count;
 
                     double estym2 = (max2 + 4 * averige2) / 5;
-                    double end2 = (myKole.licznik[myKole.licznik.Count - 1].taryfadruga) / (estym2);
+                    double end2 = licz2 / (estym2);
 
                     wjn2.Text = end2.ToString("0.00") + " dni";
                     if (end2 > 7) wjn2.Foreground = new SolidColorBrush(Colors.Black);
                     if (end2 < 7) wjn2.Foreground = new SolidColorBrush(Colors.Orange);
                     if (end2 < 3) wjn2.Foreground = new SolidColorBrush(Colors.Red);
 
-                    double dzis1 = myKole.licznik[myKole.licznik.Count - 1].taryfapierwsza - (daystotoday+1) * estym1;
+                    double dzis1 = licz - (daystotoday+1) * estym1;
                     if (dzis1 < 0) dzis1 = 0;
 
-                    double dzis2 = myKole.licznik[myKole.licznik.Count - 1].taryfadruga - (daystotoday+1) * estym2;
+                    double dzis2 = licz2- (daystotoday+1) * estym2;
                     if (dzis2 < 0) dzis2 = 0;
 
                     db1.Text = (dzis1).ToString("0.00") + " kW";

@@ -62,14 +62,6 @@ namespace App2
                         Wpis nowyWpis = new Wpis(a, b, time, 1);
                         nowyWpis.ZapiszWpis();
 
-                        if (DateTime.Compare(DateTime.Today, time) == 0)
-                        {
-                            myKole.licznik[myKole.licznik.Count - 1].taryfapierwsza
-            += a;
-
-                            myKole.licznik[myKole.licznik.Count - 1].taryfadruga
-            += b;
-                        }
                         MessageDialog mesege = new MessageDialog("Dodano");
                         await mesege.ShowAsync();
 
