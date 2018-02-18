@@ -44,7 +44,7 @@
                         <Setter Target="mySplitView.DisplayMode"
                                 Value="CompactInline" />
                         <Setter Target="mySplitView.IsPaneOpen"
-                                Value="False" />
+                                Value="True" />
                     </VisualState.Setters>
                 </VisualState>
                 
